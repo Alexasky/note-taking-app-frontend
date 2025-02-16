@@ -1,50 +1,72 @@
-# React + TypeScript + Vite
+#📒 Note-Taking App - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend of the Note-Taking App built with React, Redux, Material UI, and TypeScript.
 
-Currently, two official plugins are available:
+##🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-User authentication (JWT-based login & registration)
 
-## Expanding the ESLint configuration
+-Create, update, delete, and manage notes
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+-Responsive UI with Material UI components
 
-- Configure the top-level `parserOptions` property like this:
+-Feature-Sliced Design (FSD) architecture
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+##🛠️ Installation & Setup
+
+###1️⃣ Clone the Repository
+
+```
+git clone https://github.com/Alexasky/note-taking-app-frontend.git
+cd note-taking-app-frontend
+
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+###2️⃣ Install Dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+yarn install  # Or use npm install
+
+```
+
+###3️⃣ Create a .env File
+
+```
+Create a .env file in the root directory and add:
+
+API_URL_BASE=http://localhost:5000/api
+
+```
+
+###4️⃣ Start the Development Server
+
+```
+yarn start  # Or use npm start
+
+```
+
+The app will be available at http://localhost:5173.
+
+---
+
+##🔗 API Configuration
+
+This app communicates with the backend for authentication and note management. Make sure your backend is running.
+
+-Backend Repository:
+
+###📝 API Endpoints Used:
+
+-POST /auth/register - Register a new user
+
+-POST /auth/login - Login user and receive access token
+
+-GET /notes/:userId - Fetch user notes
+
+-POST /notes - Create a new note
+
+-PUT /notes/:noteId - Update a note
+
+-DELETE /notes/:noteId - Delete a note
