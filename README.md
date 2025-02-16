@@ -65,8 +65,8 @@ This app communicates with the backend for authentication and note management. M
 
 - GET /notes/:userId - Fetch user notes
 
-- POST /notes - Create a new note
+- POST /note/create - Create a new note
 
-- PUT /notes/:noteId - Update a note
+- PUT /note/:noteId - Update a note
 
-- DELETE /notes/:noteId - Delete a note
+- DELETE /note/:noteId - Delete a note
