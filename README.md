@@ -1,8 +1,8 @@
-#📒 Note-Taking App - Frontend
+# 📒 Note-Taking App - Frontend
 
 This is the frontend of the Note-Taking App built with React, Redux, Material UI, and TypeScript.
 
-##🚀 Features
+## 🚀 Features
 
 -User authentication (JWT-based login & registration)
 
@@ -14,9 +14,9 @@ This is the frontend of the Note-Taking App built with React, Redux, Material UI
 
 ---
 
-##🛠️ Installation & Setup
+## 🛠️ Installation & Setup
 
-###1️⃣ Clone the Repository
+### 1️⃣ Clone the Repository
 
 ```
 git clone https://github.com/Alexasky/note-taking-app-frontend.git
@@ -24,14 +24,14 @@ cd note-taking-app-frontend
 
 ```
 
-###2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 
 ```
 yarn install  # Or use npm install
 
 ```
 
-###3️⃣ Create a .env File
+### 3️⃣ Create a .env File
 
 ```
 Create a .env file in the root directory and add:
@@ -40,7 +40,7 @@ API_URL_BASE=http://localhost:5000/api
 
 ```
 
-###4️⃣ Start the Development Server
+### 4️⃣ Start the Development Server
 
 ```
 yarn start  # Or use npm start
@@ -51,13 +51,13 @@ The app will be available at http://localhost:5173.
 
 ---
 
-##🔗 API Configuration
+## 🔗 API Configuration
 
 This app communicates with the backend for authentication and note management. Make sure your backend is running.
 
 -Backend Repository:
 
-###📝 API Endpoints Used:
+### 📝 API Endpoints Used:
 
 -POST /auth/register - Register a new user
 
