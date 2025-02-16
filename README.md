@@ -4,13 +4,13 @@ This is the frontend of the Note-Taking App built with React, Redux, Material UI
 
 ## 🚀 Features
 
--User authentication (JWT-based login & registration)
+- User authentication (JWT-based login & registration)
 
--Create, update, delete, and manage notes
+- Create, update, delete, and manage notes
 
--Responsive UI with Material UI components
+- Responsive UI with Material UI components
 
--Feature-Sliced Design (FSD) architecture
+- Feature-Sliced Design (FSD) architecture
 
 ---
 
@@ -59,14 +59,14 @@ This app communicates with the backend for authentication and note management. M
 
 ### 📝 API Endpoints Used:
 
--POST /auth/register - Register a new user
+- POST /auth/register - Register a new user
 
--POST /auth/login - Login user and receive access token
+- POST /auth/login - Login user and receive access token
 
--GET /notes/:userId - Fetch user notes
+- GET /notes/:userId - Fetch user notes
 
--POST /notes - Create a new note
+- POST /notes - Create a new note
 
--PUT /notes/:noteId - Update a note
+- PUT /notes/:noteId - Update a note
 
--DELETE /notes/:noteId - Delete a note
+- DELETE /notes/:noteId - Delete a note
