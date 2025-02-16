@@ -27,7 +27,7 @@ cd note-taking-app-frontend
 ### 2️⃣ Install Dependencies
 
 ```
-yarn install  # Or use npm install
+npm install
 
 ```
 
@@ -43,7 +43,7 @@ API_URL_BASE=http://localhost:5000/api
 ### 4️⃣ Start the Development Server
 
 ```
-yarn start  # Or use npm start
+npm run dev
 
 ```
 
