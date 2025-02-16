@@ -55,7 +55,7 @@ The app will be available at http://localhost:5173.
 
 This app communicates with the backend for authentication and note management. Make sure your backend is running.
 
--Backend Repository:
+-Backend Repository: https://github.com/Alexasky/note-taking-app-backend.git
 
 ### 📝 API Endpoints Used:
 
