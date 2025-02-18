@@ -12,7 +12,9 @@ export const Notes: React.FC = () => {
   const dispatch = useAppDispatch();
   const { notes, loading, error } = useAppSelector((state) => state.notes);
   const [editingNote, setEditingNote] = useState<null | { id: string; title: string; content: string; userId: string }>(null);
-  const user = useAppSelector((state) => state.register.user);
+  const userRegister = useAppSelector((state) => state.register.user);
+  const userLogin = useAppSelector((state) => state.login.user);
+  const user = userRegister || userLogin;
   const userId = user ? user.id : null;
   const userName = user ? user.name : null;
 

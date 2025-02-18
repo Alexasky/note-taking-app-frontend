@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { createNote, deleteNote, fetchNotes, updateNote } from './api';
 
-interface Note {
+export interface INote {
   id: string;
   title: string;
   content: string;
@@ -9,7 +9,7 @@ interface Note {
 }
 
 interface NotesState {
-  notes: Note[];
+  notes: INote[];
   loading: boolean;
   error: string | null;
 }

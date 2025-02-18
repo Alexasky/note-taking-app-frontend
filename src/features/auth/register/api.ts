@@ -7,12 +7,10 @@ const API_URL = `${API_URL_BASE}/auth`;
 export const register = async ({ username, email, password }:{ username: string; email: string; password: string }) => {
   try {
     const response = await axios.post(`${API_URL}/register`, {
-    name: username,
-    email,
-    password,
-  });
-
-    console.log("Registration successful:", response.data);
+      name: username,
+      email,
+      password,
+    });
     
     const { user, accessToken, refreshToken } = response.data;
 

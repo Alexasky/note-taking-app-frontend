@@ -3,17 +3,14 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { useRef, useEffect } from 'react';
 import { format } from 'date-fns';
+import { INote } from '../../features/notes/model';
 
-type NoteType = {
-  id: string;
-  title: string;
-  content: string;
-  userId: string;
+interface NoteType extends INote {
   isNew?: boolean;
-  created_at?: string;
+  createdAt?: string;
 };
 
-type NoteProps = {
+interface NoteProps {
   note: NoteType;
   editingNote: NoteType | null;
   setEditingNote: React.Dispatch<React.SetStateAction<NoteType | null>>;
@@ -26,7 +23,13 @@ export const Note: React.FC<NoteProps> = ({ note, editingNote, setEditingNote, h
   const titleRef = useRef<HTMLInputElement | HTMLTextAreaElement | null>(null);
   
   const formatDate = (dateString: string) => {
+    if (!dateString) return '';
     const date = new Date(dateString);
+
+    if (isNaN(date.getTime())) {
+      console.error('Invalid date:', dateString);
+      return 'Invalid date';
+    }
     return format(date, 'yyyy-MM-dd');
   };
 
@@ -98,7 +101,7 @@ export const Note: React.FC<NoteProps> = ({ note, editingNote, setEditingNote, h
           </IconButton>
         </Box>
         <Badge
-          badgeContent={formatDate(note.created_at ? formatDate(note.created_at) : "")}
+          badgeContent={formatDate(note.createdAt ? formatDate(note.createdAt) : "")}
           color="secondary"
           showZero
           overlap="rectangular"
